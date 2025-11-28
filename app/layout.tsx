@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/next";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 import Header from "@/components/Header";
+import SyncUserWithConvex from "@/components/SyncUserWithConvex";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
               disableTransitionOnChange
             >
               <Header />
+              <SyncUserWithConvex />
               {children}
               <Analytics />
             </ThemeProvider>
